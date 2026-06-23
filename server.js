@@ -16,6 +16,8 @@ mongoose.connect(process.env.MONGO_URI)
   .then(function() { console.log('Connected to MongoDB') })
   .catch(function(err) { console.error('MongoDB connection error:', err.message) })
 
+app.get('/', function(req, res) { res.json({ status: 'ok' }) })
+
 app.use('/api/auth', authRoutes)
 
 // GET /api/menu — fetch all items from the database

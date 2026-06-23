@@ -32,6 +32,6 @@ app.get('/api/menu/:category', async function(req, res) {
   res.json(items)
 })
 
-app.listen(PORT, function() {
+app.listen(PORT, '0.0.0.0', function() {
   console.log('AISU server running at http://localhost:' + PORT)
 })
